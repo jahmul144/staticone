@@ -12,7 +12,7 @@ def index(request):
 		form = StoreForm(request.POST)
 		if form.is_valid():
 			form.save()
-			return HttpResponseRedirect(reverse('index'))
+			return HttpResponseRedirect(reverse('polls'))
 	else:
 		form = StoreForm() 
 	
