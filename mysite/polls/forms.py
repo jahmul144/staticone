@@ -1,5 +1,5 @@
 from django import forms
-from djange.forms import ModelForm
+from django.forms import ModelForm
 from mysite.polls.models import Stores
 
 class StoreForm(forms.ModelForm):
