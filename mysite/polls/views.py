@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse, HttpResponseRedirect
+from django.core.urlresolvers import reverse
 
 from mysite.polls.models import Stores
 from mysite.polls.forms import StoreForm
@@ -12,7 +13,7 @@ def index(request):
 		form = StoreForm(request.POST)
 		if form.is_valid():
 			form.save()
-			return HttpResponseRedirect(reverse('polls'))
+			return HttpResponseRedirect(reverse('index'))
 	else:
 		form = StoreForm() 
 	
