@@ -9,7 +9,7 @@ def index(request):
 	store_name = downtown_store.name
 	store_address = downtown_store.address
 	store_state = downtown_store.state
-	if request.method == 'Post':
+	if request.method == 'POST':
 		form = StoreForm(request.POST)
 		if form.is_valid():
 			form.save(commit=True)
@@ -17,8 +17,8 @@ def index(request):
 	else:
 		form = StoreForm() 
 	
-		context = {'store_name':store_name, 'store_address':store_address, 'store_state':store_state, 'form':form,} 
+	context = {'store_name':store_name, 'store_address':store_address, 'store_state':store_state, 'form':form,} 
 	    	
-		return render(request,'polls/index.html',context)
+	return render(request,'polls/index.html',context)
 
 
