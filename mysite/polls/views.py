@@ -5,7 +5,7 @@ from django.core.urlresolvers import reverse
 from mysite.polls.models import Stores
 from mysite.polls.forms import StoreForm
 def index(request):
-	downtown_store = Stores.objects.get(name="Corporate")
+	downtown_store = Stores.objects.get(name="E2")
 	store_name = downtown_store.name
 	store_address = downtown_store.address
 	store_state = downtown_store.state
