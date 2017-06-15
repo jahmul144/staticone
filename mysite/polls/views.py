@@ -12,7 +12,7 @@ def index(request):
 	if request.method == 'Post':
 		form = StoreForm(request.POST)
 		if form.is_valid():
-			form.save()
+			form.save(commit=True)
 			return HttpResponseRedirect(reverse('index'))
 	else:
 		form = StoreForm() 

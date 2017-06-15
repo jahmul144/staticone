@@ -8,5 +8,5 @@ class Stores(models.Model):
 	city = models.CharField(max_length=30)
 	state = models.CharField(max_length=2)
 	def __str__(self):
-		return "%s (%s,%s)" % (self.name, self.city, self.state)
+		return "%s (%s,%s) %s" % (self.name, self.city, self.state, self.address)
 	
