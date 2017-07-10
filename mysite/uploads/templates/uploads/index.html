@@ -3,7 +3,7 @@
 <body>
 
 
-<form method="post" encytpe="multipart/form-data">
+<form action="{% url "uploadindex" %}" method="post" encytpe="multipart/form-data">
     {% csrf_token %}
     {{ form.as_p }}
     <button type="submit">Upload</button>
