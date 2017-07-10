@@ -2,7 +2,7 @@ from django.shortcuts import render
 from django.http import HttpResponseRedirect
 from django.core.urlresolvers import reverse
 
-
+from mysite.uploads.models import Document
 from mysite.uploads.forms import DocumentForm
 # Create your views here. 
 def model_upload(request):
