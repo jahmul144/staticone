@@ -12,6 +12,6 @@ def model_upload(request):
 		form.save(commit=True)
 		return HttpResponseRedirect(reverse('uploadindex'))
 	else:
-		print(form.errors)
+		print form.errors
         	#form = DocumentForm()
 	return render(request, 'uploads/index.html', {'form': form})
