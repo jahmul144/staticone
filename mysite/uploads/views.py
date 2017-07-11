@@ -7,7 +7,7 @@ from mysite.uploads.forms import DocumentForm
 # Create your views here. 
 def model_upload(request):
 	if request.method == 'POST':
-		form = DocumentForm(request.POST or None, request.FILES or None)
+		form = DocumentForm(request.POST, request.FILES)
 		if form.is_valid():
 			print('true')
 			form.save(commit=True)
