@@ -9,6 +9,7 @@ def model_upload(request):
 	if request.method == 'POST':
 		form = DocumentForm(request.POST or None, request.FILES or None)
 		if form.is_valid():
+			print('true')
 			form.save(commit=True)
 			return HttpResponseRedirect(reverse('uploadindex'))
 		
