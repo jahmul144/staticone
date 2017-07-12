@@ -23,6 +23,6 @@ urlpatterns = [
 	url(r'^polls/', include('mysite.polls.urls')),
 	url(r'^admin/', admin.site.urls),
 	url(r'^submit/', include('mysite.uploads.urls')),
-] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT) 
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT, show_indexes=True) 
 
 
