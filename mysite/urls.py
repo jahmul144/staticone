@@ -24,5 +24,10 @@ urlpatterns = [
 	url(r'^submit/', include('mysite.uploads.urls')),
 ] 
 
-if settings.DEBUG is True:
-	urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+if settings.DEBUG:
+    urlpatterns += [
+        url(r'^media/(?P<path>.*)$', serve, {
+            'document_root': settings.MEDIA_ROOT,
+        }),
+    ] 
+
