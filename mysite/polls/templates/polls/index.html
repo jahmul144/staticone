@@ -33,7 +33,7 @@
         <form action="{% url "index" %}"  method="post">
 	<div class = "form-group">
                 {% csrf_token %}
-                {{ form }}
+               <table> {{ form.as_table }}</table>
 	</div>
         <input type="submit" value="Submit" />
         </form>
