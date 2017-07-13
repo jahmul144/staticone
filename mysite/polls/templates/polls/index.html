@@ -31,8 +31,10 @@
         <h3> {{store_state}} </h3>
 
         <form action="{% url "index" %}"  method="post">
+	<div class = "form-group">
                 {% csrf_token %}
                 {{ form }}
+	</div>
         <input type="submit" value="Submit" />
         </form>
 
