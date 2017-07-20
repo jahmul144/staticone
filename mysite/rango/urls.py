@@ -1,6 +1,6 @@
 from django.conf.urls import url
 
-from mysite.polls  import views
+from mysite.rango  import views
 
 urlpatterns = [
     url(r'^$', views.index, name='indexrango'),
