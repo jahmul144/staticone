@@ -8,7 +8,7 @@ def index(request):
 	return render(request, 'rango/index.html',context=context_dict)
 
 def about(request):
-	#Single quote inside double quote to say it is text
-	html1 = "<html><body"Rango says this here is the about page!" <a href='/rango/'>Index</a>"
+	#Single quote inside double quote to say it is text uftiy use double quote it will fail
+	html1 = "<html><body'Rango says this here is the about page!' <a href='/rango/'>Index</a>"
 	return HttpResponse(html1)
 
