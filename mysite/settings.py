@@ -126,5 +126,10 @@ USE_TZ = True
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media') 
 MEDIA_URL = '/media/'
+#Need to include the mysite bc to find the stati dir
+STATIC_DIR = os.path.join(BASE_DIR, 'mysite/static')
+#Must add STATICFILE DIR, not auto created by Django
+STATICFILES_DIRS = [STATIC_DIR,]
+#STATIC URL must come last bc you need the other parts to load first
 STATIC_URL = '/static/'
 
