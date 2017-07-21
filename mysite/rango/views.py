@@ -9,6 +9,6 @@ def index(request):
 
 def about(request):
 	#Single quote inside double quote to say it is text uftiy use double quote it will fail
-	html1 = "<html><body>'Rango says this here is the about page!' <a href='/rango/'>Index</a></body></html>"
-	return HttpResponse(html1)
+	#html1 = "<html><body>'Rango says this here is the about page!' <a href='/rango/'>Index</a></body></html>"
+	return render(request,'rango/about.html',)
 
