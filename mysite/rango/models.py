@@ -2,6 +2,9 @@ from django.db import models
 
 # Create your models here.
 
+class Category(models.Model):
+	name = models.CharField(max_length=126,unique=True)
+
 class Page(models.Model):
         category = models.ForeignKey(Category)
         title = models.CharField(max_length=128)
@@ -13,6 +16,4 @@ class Page(models.Model):
 
 # Create your models here.
 
-class Category(models.Model):
-	name = models.CharField(max_length=128,unique=True)
 
