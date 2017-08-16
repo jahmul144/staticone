@@ -4,6 +4,9 @@ from django.db import models
 
 class Category(models.Model):
 	name = models.CharField(max_length=126,unique=True)
+	
+	class MetaL
+		verbose_name_plural = "Categories"
 
 class Page(models.Model):
         category = models.ForeignKey(Category)
