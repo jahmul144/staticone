@@ -39,7 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'mysite.polls',
     'mysite.uploads',
-    'mysite.rango',	
+    'mysite.rango',
+    	
 ]
 
 MIDDLEWARE = [
