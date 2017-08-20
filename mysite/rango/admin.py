@@ -6,8 +6,11 @@ class PageAdmin(admin.ModelAdmin):
 	list_display = ('title','category','url')
 
 admin.site.register(Category)
-admin.site.register(Page)
-admin.siet.register(PageAdmin)
+
+#Custom admin page admin.ModelAdmin is a class representation of a model in the admin interface. Must register model with ModelAdmin object.
+#if you want the standard output then no need for a ModelAdmin object
+admin.site.register(Page,PageAdmin)
+
 
 
 
