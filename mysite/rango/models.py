@@ -11,12 +11,13 @@ class Category(models.Model):
 		verbose_name_plural = "Categories"
 
 class Page(models.Model):
-        category = models.ForeignKey(Category)
-        title = models.CharField(max_length=128)
-        views = models.IntegerField(default=0)
+	category = models.ForeignKey(Category)
+	title = models.CharField(max_length=128)
+	url = models.URLField(default="www.python.org")
+	views = models.IntegerField(default=0)
 
-        def __str__(self):
-                return self.title
+	def __str__(self):
+		return self.title
 
 
 # Create your models here.
