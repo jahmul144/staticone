@@ -3,7 +3,7 @@ from django.contrib import admin
 from mysite.rango.models import Category, Page
 
 class PageAdmin(admin.ModelAdmin):
-	list_display = ('title','category','url')
+	list_display = ('title','category','url','slug')
 
 admin.site.register(Category)
 
