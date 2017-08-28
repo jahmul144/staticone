@@ -10,10 +10,6 @@
 	{% if category %}
 		{{ category.name }}
 
-	
-	</div>
-	<div>
-
 	<ul>
 		{% if pages %}
 			{% for page in pages %}
@@ -27,7 +23,7 @@
 	{% else %}
 		<strong>The specified category does not exist!</strong>
 
-	<% endif %}
+	{% endif %}
 
 	</div>
 </body>
