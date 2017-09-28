@@ -3,6 +3,7 @@ from django.shortcuts import render
 # Create your views here.i
 
 from mysite.rango.models import Category,Page
+from mysite.rango.forms import CategoryForm
 
 def index(request):
 	category_list = Category.objects.order_by('-likes')[:5]
@@ -34,4 +35,23 @@ def show_category(request,category_name_slug):
 
 
 	return render(request, 'rango/category.html',context=context_dict)
+
+
+def add_category(request):
+	'''A HTTP POST?'''
+	form = CategoryForm()
+	if request.method == 'POST':
+		form = CategoryForm
+
+		'''Have we been provided with a valid form?'''
+		if form.is_valid():
+			'''save the new category to the database.'''
+			form.save(commit=True)
+			'''Now the category is saved we can now redirect to index page'''
+			return index(request)
+		else:
+			print(form.errors)
+	
+	''' will handle the bad form, new form, or no for supplied cases, render the form with error messages if any'''
+	return render(request, 'rando/add_category.html', {'form':form})
 
