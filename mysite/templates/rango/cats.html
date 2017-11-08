@@ -1,9 +1,9 @@
 {% if cats %}
-{% for c in cats %}
-{% if c==act_cat %}
-	{{ c.name }}
-{% endif %}
-{% endfor %}
+	{% for c in cats %}
+		{% if c == act_cat %}
+			{{ c.name }}
+		{% endif %}
+	{% endfor %}
 {% else %}
 	No categories Present
 {% endif %}
