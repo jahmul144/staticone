@@ -1,3 +1,5 @@
+{% extends 'rango/base.html' %}
+{% load staticfiles %}
 {% if cats %}
 	{% for c in cats %}
 		{% if c == act_cat %}
